@@ -99,7 +99,7 @@ and creates kernel-definition files, which make available the
 Python software needed in workshop notebooks,
 in `~/.local/shared/jupyter/kernels`.
 
-## 5. Check setup
+## 6. Check setup
 
 To check the setup, run an example script that imports `torch` and determines
 the number of `xpu` devices (Intel GPUs) available:
@@ -111,7 +111,7 @@ Note that the initial import of `torch` can take a while.
 Is the number of GPUs reported what you expect from the number of GPUs
 requested when launching the Jupyter Notebook?
 
-## 6. Submit batch job
+## 7. Submit batch job
 
 Resource allocation and non-interative tasks (batch jobs) are managed on Dawn
 using a system called [Slurm](https://slurm.schedmd.com/overview.html).
@@ -127,7 +127,7 @@ cd ~/260116-dawn-workshop/projects/diffusion-models/examples
 sbatch --account=training-dawn-gpu run_5_diffusion_part2.sh
 ```
 
-## 7. Exploring Slurm
+## 8. Exploring Slurm
 
 As seen above, jobs can be submitted to Slurm using:
 - [sbatch](https://slurm.schedmd.com/sinfo.html) `<path_to_job_script>`
@@ -173,7 +173,7 @@ for example because you realise it's not doing what you intended, you can
 do so with:
 - [scancel](https://slurm.schedmd.com/scancel.html) `<job_identifier>`
 
-## 8. Run Jupyter notebook to check available devices
+## 9. Run Jupyter notebook to check available devices
 
 In the JupyterLab window, in the left panel, navigate to
 `260116-dawn-workshop/examples`.  Open, and experiment with:
@@ -187,7 +187,7 @@ This notebook is intended to provide gives insight into the devices seen
 by `torch`, and into the variations in times taken for matrix multiplication
 by different devices.
 
-### 9. Run Jupyter notebook for training a diffusion model
+### 10. Run Jupyter notebook for training a diffusion model
 
 In the JupyterLab window, in the left panel, navigate to
 `260116-dawn-workshop/projects/diffusion-models/notebooks`.
@@ -211,7 +211,7 @@ reduction in time taken per epoch.
 Let the notebook run to completion, and check the example images
 generated.
 
-## 10. Perform model training interactively on multiple GPUs
+## 11. Perform model training interactively on multiple GPUs
 
 In the Terminal session, move to the examples directory of the
 `diffusion-models` project, and make a copy of the job script:
@@ -241,7 +241,7 @@ Run `my_run_5_diffusion_part2.sh` a second time.  What happens to the
 count of number of epochs?  When this completes, rerun the notebook.
 Has there been a improvement in the generated images?
 
-## 11. Examine completed batch jobs
+## 12. Examine completed batch jobs
 
 Check the log file for the job submitted in step 11.  The log file should
 be in the directory from which you submitted the job, with a name of the
