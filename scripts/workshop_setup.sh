@@ -14,6 +14,7 @@ ln -s ${WORKSHOP_RDS}/miniforge3 ~/miniforge3
 # Copy kernel files, and update to current home directory.
 JUPYTER_KERNELS_HOME="${HOME}/.local/share/jupyter/kernels"
 JUPYTER_KERNELS_RDS="${WORKSHOP_RDS}/jupyter/kernels"
+rm -rf ${JUPYTER_KERNELS_HOME}
 mkdir -p ${JUPYTER_KERNELS_HOME}
 cp -r ${JUPYTER_KERNELS_RDS}/* ${JUPYTER_KERNELS_HOME}
 for VENV in $(ls ${JUPYTER_KERNELS_HOME}); do
