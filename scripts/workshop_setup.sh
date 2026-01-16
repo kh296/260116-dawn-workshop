@@ -25,4 +25,5 @@ if [ ! -d ${DIFFUSION_MODELS_HOME} ]; then
   mkdir -p ${DIFFUSION_MODELS_HOME}
   git clone https://github.com/kh296/diffusion-models ${DIFFUSION_MODELS_HOME}
   git -C ${DIFFUSION_MODELS_HOME} checkout xpu
+  cp -rp ${WORKSHOP_HOME}/envs ${DIFFUSION_MODELS_HOME}/envs
 fi
