@@ -22,7 +22,7 @@ mkdir -p ${WORKSHOP_RDS}
 SCRIPTS_HOME=${WORKSHOP_HOME}/scripts
 SCRIPTS_RDS=${WORKSHOP_RDS}/scripts
 mkdir -p ${SCRIPTS_RDS}
-INSTALL_SCRIPTS="miniforge3_install.sh practical-ml-with-pytorch_install.sh ai_install.sh"
+INSTALL_SCRIPTS="miniforge3_install.sh diffusion-models_install.sh"
 for INSTALL_SCRIPT in ${INSTALL_SCRIPTS}; do
     cp ${SCRIPTS_HOME}/${INSTALL_SCRIPT} ${SCRIPTS_RDS}
 done
