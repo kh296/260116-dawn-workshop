@@ -194,9 +194,7 @@ source ${SETUP}
 conda update -n base -c conda-forge conda -y
 
 # Delete any pre-existing environment.
-if [ -d "${CONDA_HOME}/envs/${ENV_NAME}" ]; then
-    conda env remove -n ${ENV_NAME} -y
-fi
+rm -rf "${CONDA_HOME}/envs/${ENV_NAME}"
 
 # Create and activate the environment.
 conda create -n ${ENV_NAME} -y python=3.13
