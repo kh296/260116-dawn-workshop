@@ -1,6 +1,9 @@
 #/bin/bash
-# Script for copying workshop setup scripts and kernels.
+# Script for making available to user the software for workshop examples.
 WORKSHOP_HOME=$(cd $(dirname "${BASH_SOURCE[0]}")/..; pwd)
+if [[ ${WORKSHOP_HOME} == /var/spool/* ]]; then
+    WORKSHOP_HOME=$(dirname $(pwd))
+fi
 WORKSHOP_RDS="${HOME}/rds/rds-aswsai/260116-dawn-workshop"
 
 # Copy setup scripts.
