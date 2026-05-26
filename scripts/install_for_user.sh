@@ -57,7 +57,7 @@ if [[ ${WORKSHOP_HOME} == /var/spool/* ]]; then
 fi
 SCRIPTS_HOME=${WORKSHOP_HOME}/scripts
 INSTALL_SCRIPTS="diffusion-models_install.sh user_setup.sh"
-if [[ "true" == "${CONDA_DELETE}" ]]; then
+if [[ ! -d ${CONDA_INSTALL} || "true" == "${CONDA_DELETE}" ]]; then
     INSTALL_SCRIPTS="miniforge3_install.sh ${INSTALL_SCRIPTS}"
 fi
 
