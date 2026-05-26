@@ -102,11 +102,13 @@ in `~/.local/shared/jupyter/kernels`.
 ## 6. Check setup
 
 To check the setup, run an example script that imports `torch` and determines
-the number of `xpu` devices (Intel GPUs) available:
+the numbers of devices available of different type:
 ```
-~/260116-dawn-workshop/examples/run_check_xpu.sh
+~/260116-dawn-workshop/examples/run_check_devices.sh
 ```
 Note that the initial import of `torch` can take a while.
+
+Intel GPUs are listed as devices of type `xpu`.
 
 Is the number of GPUs reported what you expect from the number of GPUs
 requested when launching the Jupyter Notebook?
