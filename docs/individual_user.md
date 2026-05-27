@@ -48,6 +48,6 @@ Cambridge, 14-16 January 2026:
 The instructions above, and the workshop examples, have been tested on
 [Dawn](https://docs.hpc.cam.ac.uk/hpc/user-guide/pvc.html#hardware)
 (`xpu` devices), on the [AMD Accelerator Cloud](https://aac.amd.com/help/)
-(`cuda` devices), and, ommitting
+(`cuda` devices), and, omitting
 [Slurm](https://slurm.schedmd.com/overview.html) tasks, on MacBook
 (`mps` devices).
